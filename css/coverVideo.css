@@ -1,0 +1,187 @@
+
+* * {
+    --background-color: #1f1b1b;
+}
+
+* {
+    border: none;
+    font-size: 12px;
+}
+
+body, html {
+    scroll-behavior: smooth;
+    background: #1f1b1b;
+}
+
+.over-body, .btnVideo {
+    position: absolute
+}
+
+
+.container-cover-video {
+    width: auto;
+    height: auto;
+    background-color: #1f1b1b;
+}
+
+
+.container-cover-video > video {
+    top: 0;
+    text-align: center;
+
+}
+
+.video-cover-random {
+}
+
+
+.button-play-video {
+    color: white;
+    font-size: 9em;
+
+    cursor: pointer;
+}
+
+
+.btnVideo {
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.over-body {
+    /* W3C */
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 10%, rgba(255, 255, 255, 0.1) 70%, rgba(0, 0, 0, 0.6) 90%);
+    background: linear-gradient(left, rgba(0, 0, 0, 0.6) 10%, rgba(255, 255, 255, 0.1) 70%, rgba(0, 0, 0, 0.6) 90%);
+
+}
+
+.over-body, .btnVideo, .container-cover-video > video {
+    width: 98.49vw;
+    height: 100vh;
+}
+
+/*hover*/
+.button-play-video:hover {
+    animation: 3s botton linear;
+    -webkit-animation: 3s botton ;
+}
+
+@keyframes botton {
+
+    0% {
+        color: #e70bff;
+        transform: scale(1.3)
+    }
+    20% {
+        color: #f61828;
+        transform: scale(1.3)
+    }
+    40% {
+        color: #891cff;
+        transform: scale(1.3)
+    }
+    60% {
+        color: #ff00f2;
+        transform: scale(1.3)
+    }
+    80% {
+        color: #4c4cd7;
+        transform: scale(1.3)
+    }
+    100% {
+        color: #d43881;
+    }
+}
+
+.container-cover-video {
+    display: inline-block;
+}
+
+/*Carousel*/
+.container-carousel > button {
+    position: absolute;
+    top: calc(50% - 25%);
+    z-index: 5000;
+    font-size: 3em;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    border: none;
+    line-height: 40px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0,0, 0, 0.3);
+    animation: ease-in-out alternate 1s  2s infinite animationButtons
+
+}
+
+.right {
+    right: 0;
+}
+
+
+.left {
+    left: 0;
+}
+
+.data-carousel {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+.container-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    justify-content: space-between;
+    scroll-behavior: smooth;
+    width: 100%;
+    margin-top: 1em;
+    top: 0;
+}
+
+.container-video-carousel {
+    min-width: 35%;
+    height: auto;
+    margin: 0.3em 0.7em 0.5em 0;
+    transition: all ease 100ms;
+}
+
+.items-carousel {
+    width: 100%;
+    height: 100%;
+    transition: all ease 100ms;
+    cursor: pointer;
+}
+
+.container-video-carousel:hover {
+animation: ease 0.5s containerVideo;
+}
+
+@keyframes containerVideo {
+    100%{
+        transform: scale(1.2);
+        ));
+    }
+}
+
+@keyframes animationButtons {
+    20%{
+        transform: scale(1.3);
+    }
+    40%{
+        transform: scale(1.4);
+    }
+    60%{
+        transform: scale(1.5);
+    }
+    80%{
+        transform: scale(1.6);
+    }
+    100%{
+        transform: scale(1.7);
+    }
+}
